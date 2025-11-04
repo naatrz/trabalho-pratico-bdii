@@ -27,7 +27,7 @@ ranking_com_janela AS (
         receita_total_mes,
 
         -- FUNÇÃO DE JANELA 1 (Ranking):
-        -- Ranking de receita "particionado" (reiniciado) para cada mês.
+        -- Ranking de receita "particionado" (reiniciado) para cada mês
         DENSE_RANK() OVER (
             PARTITION BY ano_mes 
             ORDER BY receita_total_mes DESC
